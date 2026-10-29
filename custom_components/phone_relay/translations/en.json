@@ -1,0 +1,13 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Phone Relay",
+        "description": "Allow HA administrators to list locally registered Companion phones for relay enrollment. No cloud account or account linking is needed."
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Phone Relay is already configured."
+    }
+  }
+}

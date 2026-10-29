@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "home-assistant-phone-relay"
+version = "0.1.0"
+description = "Outbound-only Home Assistant Companion phone location and sensor relay"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = ["aiohttp>=3.11,<4"]
+
+[project.optional-dependencies]
+test = ["boto3>=1.35,<2", "moto[dynamodb,ssm]>=5,<6"]
+
+[project.scripts]
+ha-phone-relay = "addon.connector:main"
+
+[tool.setuptools]
+packages = ["addon"]
